@@ -45,12 +45,12 @@
    ### zend_extension=xdebug.so
    ### xdebug.mode=coverage
    
-save it and then 
-killall php-fpm
-php-fpm -F &
-nginx -s reload
+save it and then  run
+### killall php-fpm
+### php-fpm -F &
+### nginx -s reload
 
-###Now retry the coverage command 
+### Now retry the coverage command 
 
 ## Task Schdeuling
 
