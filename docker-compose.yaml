@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: laravel_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/home/haris
+    ports:
+      - "8001:80"
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: '!!Haris786!!'
+      MYSQL_DATABASE: innoscripta
+      MYSQL_USER: haris
+      MYSQL_PASSWORD: '!!Haris786!!'
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+
+networks:
+  app-network:
+    driver: bridge
