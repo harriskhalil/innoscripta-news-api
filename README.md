@@ -42,7 +42,7 @@
 ### - apk add php82-xdebug
 ### - vi /etc/php82/conf.d/50_xdebug.ini
 ### - put these in file 
-   ###zend_extension=xdebug.so
+   ### zend_extension=xdebug.so
    ### xdebug.mode=coverage
    
 save it and then 
