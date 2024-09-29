@@ -20,7 +20,8 @@
 
 ## Finding the Correct DB Host
 
-### - docker exec -it mysql bash
+### - docker exec -it mysql /bin/sh
+
 ### - cat /etc/hosts
 ### Use the correct DB_HOST value in your .env file.
 
@@ -35,6 +36,21 @@
 ## Running Tests with Coverage
 
 ### ./vendor/bin/pest --coverage
+
+##in case commnad doesnot work follow these steps
+### - docker exec -it laravel_app /bin/sh
+### - apk add php82-xdebug
+### - vi /etc/php82/conf.d/50_xdebug.ini
+### - put these in file 
+   ###zend_extension=xdebug.so
+   ### xdebug.mode=coverage
+   
+save it and then 
+killall php-fpm
+php-fpm -F &
+nginx -s reload
+
+###Now retry the coverage command 
 
 ## Task Schdeuling
 
