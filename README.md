@@ -10,7 +10,7 @@
 
 ### docker-compose up -d
 
-- ### Laravel container : laravel-app
+- ### Laravel container : laravel_app
 - ### MySQL container : mysql
 
 ## Set Mail Configuration
